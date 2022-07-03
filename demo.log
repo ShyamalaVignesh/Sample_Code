@@ -1,0 +1,8 @@
+DEBUG:root:This message should go to the log file
+INFO:root:This is demo log in file
+WARNING:root:This is warning msg
+ERROR:root:This is for error
+DEBUG:root:This message should go to the log file
+INFO:root:This is demo log in file
+WARNING:root:This is warning msg
+ERROR:root:This is for error

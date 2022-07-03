@@ -1,0 +1,31 @@
+import xml.etree.ElementTree as ET
+
+
+data = ET.Element('admin')
+
+#creating SubElement under admin
+element1 = ET.SubElement(data, 'Register')
+
+#creating SubElement under Register
+s_elem1 = ET.SubElement(element1, 'E4')
+s_elem2 = ET.SubElement(element1, 'D4')
+
+# Adding attributes to the tags under
+# `items`
+s_elem1.set('type', 'Accepted')
+s_elem2.set('type', 'Declined')
+
+# Adding text between the `E4` and `D5`
+# subtag
+s_elem1.text = "King's Gambit Accepted"
+s_elem2.text = "Queen's Gambit Declined"
+
+# Converting the xml data to byte object,
+# for allowing flushing data to file
+# stream
+b_xml = ET.tostring(data)
+
+# Opening a file under the name `items2.xml`,
+# with operation mode `wb` (write + binary)
+with open("admindemo.xml", "wb") as f:
+    f.write(b_xml)
