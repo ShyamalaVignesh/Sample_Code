@@ -53,3 +53,11 @@ while i<10:
     if i==5:
         continue
     print("chair",i)
+
+# validation check using while
+
+username=input("Enter the user name:")
+while len(username)!=5:
+    print("Sorry!Username should of length 5 only!")
+    username=input("Enter the user name:")
+print(username)
